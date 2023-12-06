@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CardForm from "../components/Card.jsx";
+import CardForm from "../components/Card";
 import mypic from "../components/images/group-image.svg";
 import Input from "../components/CustomInput";
 import Model from "../components/Model";

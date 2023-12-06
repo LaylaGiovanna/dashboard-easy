@@ -118,7 +118,7 @@ const CardCreditos = (props) => {
     async function PostCredito(event) {
         try {
             event.preventDefault();
-            const url = 'http://10.107.144.5:3000/users/balance/DEPOSIT';
+            const url = 'http://10.107.144.2:3000/users/balance/DEPOSIT';
 
             const credito = {
                 "email": email,

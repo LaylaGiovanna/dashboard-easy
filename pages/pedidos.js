@@ -238,7 +238,7 @@ export default function Pedidos() {
 
     console.log(data);
 
-    fetch('http://10.107.144.02:3000/users/balance/DEPOSIT', {
+    fetch('http://10.107.144.2:3000/users/balance/DEPOSIT', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -107,7 +107,7 @@ const Produtos = () => {
 
     console.log(token)
 
-    fetch(`http://10.107.144.02:3000/products/${productToDelete}`, {
+    fetch(`http://10.107.144.2:3000/products/${productToDelete}`, {
       method: 'DELETE',
       headers: {
         Accept: "application/json",
@@ -156,7 +156,7 @@ const Produtos = () => {
       // const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWF0aGV1cyBTaXF1ZWlyYSBTaWx2YSIsImlkIjoxLCJpYXQiOjE2OTg3NDk5ODEsImV4cCI6MTY5ODc1OTk4MX0.C0H5ZOr0n5JtcQJSaNr3REdqhH9HFLzJ-uIaRWHqJLk';
       const token = localStorage.getItem('token');
 
-      fetch(`http://10.107.144.02:3000/products/${productToEdit}`, {
+      fetch(`http://10.107.144.2:3000/products/${productToEdit}`, {
         method: 'GET',
         headers: {
           Accept: "application/json",
@@ -230,15 +230,16 @@ const Produtos = () => {
       disponibility: formData.disponibility,
       // Adicione outros campos conforme necessário
     };
-    console.log(data)
+    console.log("aaa" + data)
 
-    fetch(`http://10.107.144.02:3000/products/${productToEdit}`, {
+    fetch(`http://10.107.144.2:3000/products/${productToEdit}`, {
       method: 'PATCH', // Altere para PATCH
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
       },
       body: JSON.stringify(data),
+      
     })
       .then((response) => {
         if (!response.ok) {
@@ -264,7 +265,7 @@ const Produtos = () => {
     // const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWF0aGV1cyBTaXF1ZWlyYSBTaWx2YSIsImlkIjoxLCJpYXQiOjE2OTg3NDk5ODEsImV4cCI6MTY5ODc1OTk4MX0.C0H5ZOr0n5JtcQJSaNr3REdqhH9HFLzJ-uIaRWHqJLk';
     const token = localStorage.getItem('token');
 
-    fetch("http://10.107.144.02:3000/products/types", {
+    fetch("http://10.107.144.2:3000/products/types", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -357,7 +358,7 @@ const Produtos = () => {
 
     console.log('Dados do produto:', { data });
 
-    fetch('http://10.107.144.02:3000/products', {
+    fetch('http://10.107.144.2:3000/products', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -446,7 +447,7 @@ const Produtos = () => {
     // const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWF0aGV1cyBTaXF1ZWlyYSBTaWx2YSIsImlkIjoxLCJpYXQiOjE2OTg3NDk5ODEsImV4cCI6MTY5ODc1OTk4MX0.C0H5ZOr0n5JtcQJSaNr3REdqhH9HFLzJ-uIaRWHqJLk';
     const token = localStorage.getItem('token');
 
-    fetch("http://10.107.144.02:3000/products/", {
+    fetch("http://10.107.144.2:3000/products/", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -511,7 +512,7 @@ const Produtos = () => {
 
           // Faça a requisição PATCH para atualizar no banco de dados
           const token = localStorage.getItem('token');
-          fetch(`http://10.107.144.02:3000/products/${productId}`, {
+          fetch(`http://10.107.144.2:3000/products/${productId}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json',
@@ -743,7 +744,10 @@ const Produtos = () => {
                         <Image
                           src={photo}
                           alt="Selected"
-                          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                          width={"100%"}
+                          height={"100%"}
+                          objectFit={"cover"}
+                          // style={{ width: "100%", height: "100%", objectFit: "cover" }}
 
                         />
                       )}
@@ -981,7 +985,10 @@ const Produtos = () => {
                         <Image
                           src={formData.photo}
                           alt="Selected"
-                          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                          width={"100%"}
+                          height={"100%"}
+                          objectFit={"cover"}
+                          // style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         />
                       )}
                     </div>

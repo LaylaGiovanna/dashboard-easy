@@ -24,7 +24,7 @@ import {
   IconShoppingCartExclamation
 } from '@tabler/icons-react';
 import { useLogout } from './logout';
-import LogoutPopup from "./LogoutPopUp";
+// import LogoutPopup from "./LogoutPopUp";
 
 
 

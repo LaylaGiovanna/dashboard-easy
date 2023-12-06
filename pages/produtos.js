@@ -740,7 +740,7 @@ const Produtos = () => {
 
                     >
                       {photo && (
-                        <img
+                        <Image
                           src={photo}
                           alt="Selected"
                           style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -978,7 +978,7 @@ const Produtos = () => {
                       }}
                     >
                       {formData.photo && (
-                        <img
+                        <Image
                           src={formData.photo}
                           alt="Selected"
                           style={{ width: "100%", height: "100%", objectFit: "cover" }}
